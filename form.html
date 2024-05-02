@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Questions</title>
+    <link rel="stylesheet" href="web.css">
+    
+
+</head>
+
+<body>
+    <h1>Welcome to eco tally answer a few easy questions to know your carbon footprint</h1>
+    <form id="questionnaireForm">
+        <h2>Do you own a vehicle? If yes, which one:</h2>
+        <label id="vehicle-label-2w">
+            <input type="radio" name="vehicle" value="2-wheeler"> <span>2-wheeler</span>
+        </label><br>
+        <label id="vehicle-label-3w">
+            <input type="radio" name="vehicle" value="3-wheeler"> <span>3-wheeler</span>
+        </label><br>
+        <label id="vehicle-label-4w">
+            <input type="radio" name="vehicle" value="4-wheeler"> <span>4-wheeler</span>
+        </label><br>
+        <label id="vehicle-label-none">
+            <input type="radio" name="vehicle" value="none"> <span>None</span>
+        </label><br><br>
+
+        <h2>How many kilometers do you travel by your vehicle each day:</h2>
+        <label id="daily-travel-label-0-10km">
+            <input type="radio" name="daily_travel" value="0-10km"> <span>0-10 km</span>
+        </label><br>
+        <label id="daily-travel-label-10-20km">
+            <input type="radio" name="daily_travel" value="10-20km"> <span>10-20 km</span>
+        </label><br>
+        <label id="daily-travel-label-20-30km">
+            <input type="radio" name="daily_travel" value="20-30km"> <span>20-30 km</span>
+        </label><br>
+        <label id="daily-travel-label-30km-or-more">
+            <input type="radio" name="daily_travel" value="30km_or_more"> <span>30 km or more</span>
+        </label><br><br>
+
+        <h2>Do you use public transport like bus, train, etc.?</h2>
+        <label id="public-transport-yes">
+            <input type="radio" name="use_public_transport" value="yes" id="use_public_transport_yes"> <span>Yes</span>
+        </label><br>
+        <label id="public-transport-no">
+            <input type="radio" name="use_public_transport" value="no" id="use_public_transport_no"> <span>No</span>
+        </label><br><br>
+
+        
+        <div id="conditional_question" style="display: none;">
+            <h2> how much km do you travel by public transport:</h2>
+            <label id="public-transport-travel-label-0-10km">
+                <input type="radio" name="public_transport_travel" value="0-10km"> <span>0-10 km</span>
+            </label><br>
+            <label id="public-transport-travel-label-10-20km">
+                <input type="radio" name="public_transport_travel" value="10-20km"> <span>10-20 km</span>
+            </label><br>
+            <label id="public-transport-travel-label-20-30km">
+                <input type="radio" name="public_transport_travel" value="20-30km"> <span>20-30 km</span>
+            </label><br>
+            <label id="public-transport-travel-label-30km-or-more">
+                <input type="radio" name="public_transport_travel" value="30km_or_more"> <span>30 km or more</span>
+            </label><br><br>
+        </div>
+
+    
+        
+
+        <h2>What is the total amount of the bill you get per month:</h2>
+        <label id="monthly-bill-label-1k-2k">
+            <input type="radio" name="monthly_bill" value="1k-2k"> <span>1k-2k</span>
+        </label><br>
+        <label id="monthly-bill-label-2k-4k">
+            <input type="radio" name="monthly_bill" value="2k-4k"> <span>2k-4k</span>
+        </label><br>
+        <label id="monthly-bill-label-4k-5k">
+            <input type="radio" name="monthly_bill" value="4k-5k"> <span>4k-5k</span>
+        </label><br>
+        <label id="monthly-bill-label-5k-or-more">
+            <input type="radio" name="monthly_bill" value="5k_or_more"> <span>5k or more</span>
+        </label><br><br>
+
+        <h2>How many cylinders do you require in a year:</h2>
+        <label>
+            <input type="text" name="cylinders_required" placeholder="Enter the number of cylinders" step="1">
+        </label><br><br>
+
+        <h2>How many times in a year do you travel by flight:</h2>
+        <label id="travel-by-flight-label-often">
+            <input type="radio" name="travel_by_flight" value="often"> <span>Often</span>
+        </label><br>
+        <label id="travel-by-flight-label-few-times">
+            <input type="radio" name="travel_by_flight" value="few_times"> <span>Few times</span>
+        </label><br>
+        <label id="travel-by-flight-label-too-often">
+            <input type="radio" name="travel_by_flight" value="too_often"> <span>Too often</span>
+        </label><br>
+        <label id="travel-by-flight-label-does-not-travel-by-plane">
+            <input type="radio" name="travel_by_flight" value="does_not_travel_by_plane"> <span>Does not travel by
+                plane</span>
+        </label><br><br>
+
+        <input type="button" value="Calculate Carbon Footprint" onclick="calculateAll()">
+    </form>
+    <div id="resultContainer">
+        <h2>Your estimated carbon footprint:</h2>
+        <p id="result"></p>
+    </div>
+    <script src="web.js"></script>
+
+</body>
+
+</html>
